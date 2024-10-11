@@ -1,0 +1,252 @@
+.respage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('C:/Users/Oana/Desktop/UTCN AC/Facultate - anul 4/Licenta yuck/fe/AI-Energy-Consumption-Concerns-and-Solutions.avif');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 80px;
+    color: #fff;
+}
+
+.respage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 128, 0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navhome a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.header h1 {
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 20px;
+    margin-top: 70px;
+    gap: 40px;
+    margin-left: 10px;
+}
+
+.searchSection {
+    flex: 0 1 300px;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chartSection {
+    flex: 1 1 auto;
+    height: 800px;
+    width: 1000px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+h2, h3 {
+    color: black;
+}
+
+.selectDevice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.selectDevice select {
+    margin-right: 10px;
+}
+
+.searchSection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.searchSection li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #144587;
+    color: #000;
+}
+
+.searchSection label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.searchSection input {
+    width: 95%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6b6bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #5757d1;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: none;
+    color: #ff6347;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+.deleteButton:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px #ff6347;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-icon span {
+    background-color: #444;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu-item {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.dropdown-menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.navhome{
+    padding: 5px 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #6b6bff, #42aaff);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navhome:hover {
+    background: linear-gradient(45deg, #42aaff, #6b6bff);
+    transform: scale(1.05);
+}
+
+.navhome:active {
+    transform: scale(0.95);
+}

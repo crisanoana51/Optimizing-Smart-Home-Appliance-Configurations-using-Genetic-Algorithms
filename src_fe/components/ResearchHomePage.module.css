@@ -1,0 +1,133 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('C:/Users/Oana/Desktop/UTCN AC/Facultate - anul 4/Licenta yuck/fe/AI-Energy-Consumption-Concerns-and-Solutions.avif');
+    background-size: cover;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(0, 0, 128, 0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.user-icon {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6b6bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    margin-right: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+    width: 200px;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu-item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.home-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.home-container h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.navigate-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6b6bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navigate-button:hover {
+    background-color: #5757d1;
+    transform: scale(1.05);
+}
+
+.navigate-button:active {
+    transform: scale(0.95);
+}
